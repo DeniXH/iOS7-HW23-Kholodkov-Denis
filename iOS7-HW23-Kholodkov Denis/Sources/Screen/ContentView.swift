@@ -15,7 +15,7 @@ struct Radio: View {
             ZStack {
                 Color.white
             }
-            .navigationTitle("Радио")
+            .navigationTitle(Metric.textRadio)
         }
     }
 }
@@ -26,7 +26,7 @@ struct Search: View {
             ZStack {
                 Color.white
             }
-            .navigationTitle("Поиск")
+            .navigationTitle(Metric.textFind)
         }
     }
 }
@@ -37,21 +37,22 @@ struct ContentView: View {
         TabView {
             LibraryView()
                 .tabItem {
-                    Image(systemName: "externaldrive.fill")
-                    Text("Медиатека")
+                    Image(systemName: Metric.pictureMediastore)
+                    Text(Metric.textMediaStore)
                 }
 
             Radio()
                 .tabItem {
-                    Image(systemName: "radio")
-                    Text("Радио")
+                    Image(systemName: Metric.pictureRadio)
+                    Text(Metric.textRadio)
                 }
             Search()
                 .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Поиск")
+                    Image(systemName: Metric.pictureSearch)
+                    Text(Metric.textFind)
                 }
         }
+        .accentColor(.blue)
     }
 }
 
@@ -60,3 +61,16 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+enum Metric {
+    static let textRadio = "Радио"
+    static let textFind = "Поиск"
+    static let textMediaStore = "Медиатека"
+
+    static let pictureMediastore = "externaldrive.fill"
+    static let pictureRadio = "radio"
+    static let pictureSearch = "magnifyingglass"
+
+}
+

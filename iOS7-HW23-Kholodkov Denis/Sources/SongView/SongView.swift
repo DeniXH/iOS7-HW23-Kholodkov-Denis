@@ -10,28 +10,28 @@ import SwiftUI
 struct SongView: View {
     var body: some View {
         HStack {
-            Image("dmx_d")
+            Image(Metric.imageSongName)
                 .foregroundColor(.gray)
-                .frame(width: 60,
-                       height: 60)
-                .cornerRadius(6)
-                .shadow(radius: 8)
+                .frame(width: Metric.imageSize,
+                       height: Metric.imageSize)
+                .cornerRadius(Metric.cornerRadiusValue)
+                .shadow(radius: Metric.shadowRadiusValue)
                 .padding()
-            Text("DMX - One love")
+            Text(Metric.nameSong)
             Spacer()
             Button(action: {}) {
-                Image(systemName: "play.fill")
+                Image(systemName: Metric.buttonPlayName)
                     .foregroundColor(.black)
                     .font(.title3)
             }
             Button(action: {}) {
-                Image(systemName: "forward.fill")
+                Image(systemName: Metric.buttonForward)
                     .foregroundColor(.black)
                     .font(.title3)
                     .padding()
             }
         }
-        .background(Color("greyColor"))
+        .background(Color(Metric.backColor))
         .overlay(Divider(), alignment: .bottom)
     }
 }
@@ -39,5 +39,20 @@ struct SongView: View {
 struct SongView_Previews: PreviewProvider {
     static var previews: some View {
         SongView()
+    }
+}
+
+extension SongView {
+    enum Metric {
+        static let imageSongName = "dmx_d"
+        static let nameSong = "DMX - One love"
+        
+        static let buttonPlayName = "play.fill"
+        static let buttonForward = "forward.fill"
+        static let backColor = "greyColor"
+        
+        static let imageSize: CGFloat = 60
+        static let cornerRadiusValue: CGFloat = 6
+        static let shadowRadiusValue: CGFloat = 8
     }
 }

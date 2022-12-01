@@ -20,14 +20,14 @@ struct ListMedia: View {
                         ListRow(items: model)
                             .listRowSeparator(.visible)
                     } .onMove(perform: moveRows)
-                    }
+                }
                 .environment(\.editMode, .constant(.active))
                 .listStyle(.plain)
-                .navigationTitle("Медиатека")
+                .navigationTitle(Metric.navigationTitle)
                 .navigationBarItems(trailing: Button(action: {
                     dismiss()
                 }) {
-                    Text("Готово")
+                    Text(Metric.buttonFinishChange)
                         .foregroundColor(.red)
                 })
             } .navigationBarBackButtonHidden(true)
@@ -43,5 +43,12 @@ struct ListMedia: View {
 struct ListMedia_Previews: PreviewProvider {
     static var previews: some View {
         ListMedia()
+    }
+}
+
+extension ListMedia {
+    enum Metric {
+        static let navigationTitle = "Медиатека"
+        static let buttonFinishChange = "Готово"
     }
 }

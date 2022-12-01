@@ -12,20 +12,25 @@ struct LibraryView: View {
         NavigationView {
             VStack() {
                 Spacer()
-                Text("Ищете свою музыку?")
+                Text(Metric.findMusic)
                     .bold()
                     .font(.title2)
                     .padding(0.5)
-                Text("Здесь появится купленная Вами в iTunes Store музыка.")
+                Text(Metric.musicFromItunes)
                     .multilineTextAlignment(.center)
                     .font(.title3)
                     .foregroundColor(.gray)
                     .padding(.leading, 15)
                     .padding(.trailing, 15)
                 Spacer()
-                //  SongView()
+                SongView()
             }
-            .navigationTitle("Медиатека")
+            .navigationTitle(Metric.mediaStore)
+            .navigationBarItems(trailing: NavigationLink(destination: ListMedia(),
+                                                        label: {
+                Text(Metric.changeStore)
+                    .foregroundColor(.red)
+            }))
         }
     }
 }
@@ -33,5 +38,14 @@ struct LibraryView: View {
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
+    }
+}
+
+extension LibraryView {
+    enum Metric {
+        static let findMusic = "Ищете свою музыку?"
+        static let musicFromItunes = "Здесь появится купленная Вами в iTunes Store музыка."
+        static let mediaStore = "Медиатека"
+        static let changeStore = "Изменить"
     }
 }
