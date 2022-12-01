@@ -11,6 +11,11 @@
 		92904DCD2938EF2000858EEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92904DCC2938EF2000858EEC /* ContentView.swift */; };
 		92904DCF2938EF2400858EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92904DCE2938EF2400858EEC /* Assets.xcassets */; };
 		92904DD22938EF2400858EEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92904DD12938EF2400858EEC /* Preview Assets.xcassets */; };
+		92B392AD293920600039F687 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392AC293920600039F687 /* LibraryView.swift */; };
+		92B392AF2939239A0039F687 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392AE2939239A0039F687 /* SongView.swift */; };
+		92B392B1293940660039F687 /* ListMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392B0293940660039F687 /* ListMedia.swift */; };
+		92B392B3293941530039F687 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392B2293941530039F687 /* Model.swift */; };
+		92B392B5293945850039F687 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392B4293945850039F687 /* ListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		92904DCC2938EF2000858EEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92904DCE2938EF2400858EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92904DD12938EF2400858EEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92B392AC293920600039F687 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		92B392AE2939239A0039F687 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		92B392B0293940660039F687 /* ListMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMedia.swift; sourceTree = "<group>"; };
+		92B392B2293941530039F687 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		92B392B4293945850039F687 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +61,8 @@
 		92904DC92938EF2000858EEC /* iOS7-HW23-Kholodkov Denis */ = {
 			isa = PBXGroup;
 			children = (
-				92904DCA2938EF2000858EEC /* iOS7_HW23_Kholodkov_DenisApp.swift */,
-				92904DCC2938EF2000858EEC /* ContentView.swift */,
-				92904DCE2938EF2400858EEC /* Assets.xcassets */,
-				92904DD02938EF2400858EEC /* Preview Content */,
+				92B392A4293910830039F687 /* Sources */,
+				92B392A6293911E50039F687 /* Resources */,
 			);
 			path = "iOS7-HW23-Kholodkov Denis";
 			sourceTree = "<group>";
@@ -65,6 +73,77 @@
 				92904DD12938EF2400858EEC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92B392A4293910830039F687 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				92B392A5293910DA0039F687 /* App */,
+				92B392AA2939200A0039F687 /* ListView */,
+				92B392A929391FF70039F687 /* LibraryView */,
+				92B392A829391FD10039F687 /* Model */,
+				92B392A7293913CA0039F687 /* Screen */,
+				92B392AB293920290039F687 /* SongView */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		92B392A5293910DA0039F687 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				92904DCA2938EF2000858EEC /* iOS7_HW23_Kholodkov_DenisApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		92B392A6293911E50039F687 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92904DCE2938EF2400858EEC /* Assets.xcassets */,
+				92904DD02938EF2400858EEC /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		92B392A7293913CA0039F687 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				92904DCC2938EF2000858EEC /* ContentView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		92B392A829391FD10039F687 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92B392B2293941530039F687 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92B392A929391FF70039F687 /* LibraryView */ = {
+			isa = PBXGroup;
+			children = (
+				92B392AC293920600039F687 /* LibraryView.swift */,
+			);
+			path = LibraryView;
+			sourceTree = "<group>";
+		};
+		92B392AA2939200A0039F687 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				92B392B0293940660039F687 /* ListMedia.swift */,
+				92B392B4293945850039F687 /* ListRow.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		92B392AB293920290039F687 /* SongView */ = {
+			isa = PBXGroup;
+			children = (
+				92B392AE2939239A0039F687 /* SongView.swift */,
+			);
+			path = SongView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +217,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				92904DCD2938EF2000858EEC /* ContentView.swift in Sources */,
+				92B392AD293920600039F687 /* LibraryView.swift in Sources */,
 				92904DCB2938EF2000858EEC /* iOS7_HW23_Kholodkov_DenisApp.swift in Sources */,
+				92B392B3293941530039F687 /* Model.swift in Sources */,
+				92B392AF2939239A0039F687 /* SongView.swift in Sources */,
+				92B392B5293945850039F687 /* ListRow.swift in Sources */,
+				92B392B1293940660039F687 /* ListMedia.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +350,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iOS7-HW23-Kholodkov Denis/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS7-HW23-Kholodkov Denis/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 3L65F6AAP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,7 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iOS7-HW23-Kholodkov Denis/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS7-HW23-Kholodkov Denis/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 3L65F6AAP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
