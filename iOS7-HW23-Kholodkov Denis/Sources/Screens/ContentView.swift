@@ -7,19 +7,6 @@
 
 import SwiftUI
 
-
-
-struct Radio: View {
-    var body: some View {
-        NavigationView {
-            ZStack {
-                Color.white
-            }
-            .navigationTitle(Metric.textRadio)
-        }
-    }
-}
-
 struct Search: View {
     var body: some View {
         NavigationView {
@@ -62,15 +49,12 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-
-enum Metric {
-    static let textRadio = "Радио"
-    static let textFind = "Поиск"
-    static let textMediaStore = "Медиатека"
-
-    static let pictureMediastore = "externaldrive.fill"
-    static let pictureRadio = "radio"
-    static let pictureSearch = "magnifyingglass"
-
-}
-
+    enum Metric {
+        static let textRadio = "Радио"
+        static let textFind = "Поиск"
+        static let textMediaStore = "Медиатека"
+        
+        static let pictureMediastore = "externaldrive.fill"
+        static let pictureRadio = "radio"
+        static let pictureSearch = "magnifyingglass"
+    }
