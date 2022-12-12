@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct Radio: View {
     var body: some View {
         NavigationView {
@@ -30,7 +28,6 @@ struct Search: View {
         }
     }
 }
-
 
 struct ContentView: View {
     var body: some View {
@@ -62,15 +59,13 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-
 enum Metric {
     static let textRadio = "Радио"
     static let textFind = "Поиск"
     static let textMediaStore = "Медиатека"
 
-    static let pictureMediastore = "externaldrive.fill"
-    static let pictureRadio = "radio"
+    static let pictureMediastore = "square.stack.fill"
+    static let pictureRadio = "dot.radiowaves.left.and.right"
     static let pictureSearch = "magnifyingglass"
 
 }
-

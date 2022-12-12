@@ -14,7 +14,7 @@
 		92B392AD293920600039F687 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392AC293920600039F687 /* LibraryView.swift */; };
 		92B392AF2939239A0039F687 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392AE2939239A0039F687 /* SongView.swift */; };
 		92B392B1293940660039F687 /* ListMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392B0293940660039F687 /* ListMedia.swift */; };
-		92B392B3293941530039F687 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392B2293941530039F687 /* Model.swift */; };
+		92B392B3293941530039F687 /* ModelSing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392B2293941530039F687 /* ModelSing.swift */; };
 		92B392B5293945850039F687 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B392B4293945850039F687 /* ListRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +27,7 @@
 		92B392AC293920600039F687 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		92B392AE2939239A0039F687 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		92B392B0293940660039F687 /* ListMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMedia.swift; sourceTree = "<group>"; };
-		92B392B2293941530039F687 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		92B392B2293941530039F687 /* ModelSing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSing.swift; sourceTree = "<group>"; };
 		92B392B4293945850039F687 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +116,7 @@
 		92B392A829391FD10039F687 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92B392B2293941530039F687 /* Model.swift */,
+				92B392B2293941530039F687 /* ModelSing.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 				92904DCD2938EF2000858EEC /* ContentView.swift in Sources */,
 				92B392AD293920600039F687 /* LibraryView.swift in Sources */,
 				92904DCB2938EF2000858EEC /* iOS7_HW23_Kholodkov_DenisApp.swift in Sources */,
-				92B392B3293941530039F687 /* Model.swift in Sources */,
+				92B392B3293941530039F687 /* ModelSing.swift in Sources */,
 				92B392AF2939239A0039F687 /* SongView.swift in Sources */,
 				92B392B5293945850039F687 /* ListRow.swift in Sources */,
 				92B392B1293940660039F687 /* ListMedia.swift in Sources */,
