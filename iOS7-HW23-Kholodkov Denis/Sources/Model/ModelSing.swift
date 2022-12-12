@@ -7,31 +7,31 @@
 
 import SwiftUI
 
-struct Model: Hashable, Identifiable {
+struct ModelSing: Hashable, Identifiable {
     var id = UUID()
     let name: String
     let icon: String
 
-    static var model: [Model] = [Model(name: "Плейлисты",
+    static var model: [ModelSing] = [ModelSing(name: "Плейлисты",
                                        icon: "music.note.list"),
-                                 Model(name: "Артисты",
+                                     ModelSing(name: "Артисты",
                                        icon: "music.mic"),
-                                 Model(name: "Альбомы",
+                                     ModelSing(name: "Альбомы",
                                        icon: "square.stack"),
-                                 Model(name: "Песни",
+                                     ModelSing(name: "Песни",
                                        icon: "music.note"),
-                                 Model(name: "Телешоу и фильмы",
+                                     ModelSing(name: "Телешоу и фильмы",
                                        icon: "tv"),
-                                 Model(name: "Видеоклипы",
+                                     ModelSing(name: "Видеоклипы",
                                        icon: "music.note.tv"),
-                                 Model(name: "Жанры",
+                                     ModelSing(name: "Жанры",
                                        icon: "guitars"),
-                                 Model(name: "Сборники",
+                                     ModelSing(name: "Сборники",
                                        icon: "person.2.crop.square.stack"),
-                                 Model(name: "Авторы",
+                                     ModelSing(name: "Авторы",
                                        icon: "music.quarternote.3"),
-                                 Model(name: "Загружено",
+                                     ModelSing(name: "Загружено",
                                        icon: "arrow.down.circle"),
-                                 Model(name: "Домашняя коллекция",
+                                     ModelSing(name: "Домашняя коллекция",
                                        icon: "music.note.house")]
 }
