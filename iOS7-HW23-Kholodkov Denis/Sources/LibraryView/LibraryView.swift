@@ -15,19 +15,19 @@ struct LibraryView: View {
                 Text(Metric.findMusic)
                     .bold()
                     .font(.title2)
-                    .padding(0.5)
+                    .padding(Metric.textFindMusic)
                 Text(Metric.musicFromItunes)
                     .multilineTextAlignment(.center)
                     .font(.title3)
                     .foregroundColor(.gray)
-                    .padding(.leading, 15)
-                    .padding(.trailing, 15)
+                    .padding(.leading, Metric.textMusicFromItunes)
+                    .padding(.trailing, Metric.textMusicFromItunes)
                 Spacer()
                 SongView()
             }
             .navigationTitle(Metric.mediaStore)
             .navigationBarItems(trailing: NavigationLink(destination: ListMedia(),
-                                                        label: {
+                label: {
                 Text(Metric.changeStore)
                     .foregroundColor(.red)
             }))
@@ -47,5 +47,7 @@ extension LibraryView {
         static let musicFromItunes = "Здесь появится купленная Вами в iTunes Store музыка."
         static let mediaStore = "Медиатека"
         static let changeStore = "Изменить"
+        static let textFindMusic: CGFloat = 0.5
+        static let textMusicFromItunes: CGFloat = 15
     }
 }
