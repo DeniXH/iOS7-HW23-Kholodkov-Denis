@@ -18,7 +18,6 @@ struct Search: View {
     }
 }
 
-
 struct ContentView: View {
     var body: some View {
         TabView {

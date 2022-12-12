@@ -23,15 +23,15 @@ struct Radio: View {
                                     .multilineTextAlignment(.leading)
                                     .bold()
                                     .font(.caption)
-                                    .frame(maxWidth: 280, alignment: .leading)
+                                    .frame(maxWidth: Metric.descriptionWidth, alignment: .leading)
                                 Text(Metric.descriotionSecond[index])
                                     .padding(.top)
                                     .multilineTextAlignment(.leading)
                                     .font(.title2)
-                                    .lineLimit(3, reservesSpace: true)
-                                    .frame(maxWidth: 280, alignment: .leading)
+                                    .lineLimit(Metric.lineLimit, reservesSpace: true)
+                                    .frame(maxWidth: Metric.descriptionWidth, alignment: .leading)
                                 Image(Metric.pictureNames[index]).scaledToFit()
-                                    .frame(width: 290)
+                                    .frame(width: Metric.imageFrameWidth)
                                     .padding(.leading)
                             }
                         }
@@ -72,6 +72,10 @@ extension Radio {
         static let rowsV = [
             GridItem(.fixed(300)),
         ]
+
+        static let descriptionWidth: CGFloat = 280
+        static let imageFrameWidth: CGFloat = 290
+        static let lineLimit = 3
 
         static let textRadio = "Радио"
 

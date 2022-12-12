@@ -22,7 +22,7 @@ struct ListRow: View {
                     Image(systemName: Metric.checkRow)
                         .foregroundColor(.pink)
                         .background(.white)
-                        .cornerRadius(10)
+                        .cornerRadius(Metric.rowCornerRadius)
                 }
             }
             Image(systemName: items.icon)
@@ -43,5 +43,6 @@ extension ListRow {
     enum Metric {
         static let imageCircle = "circle"
         static let checkRow = "checkmark.circle.fill"
+        static let rowCornerRadius: CGFloat = 10
     }
 }
