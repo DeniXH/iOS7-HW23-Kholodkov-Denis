@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListMedia: View {
 
-    var mediaSet: [ModelSing] = ModelSing.model
+    var mediaSet: [SingType] = SingType.singType
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
@@ -35,7 +35,7 @@ struct ListMedia: View {
         }
     }
     func  moveRows(source: IndexSet, target: Int) {
-        ModelSing.model.move(fromOffsets: source, toOffset: target)
+        SingType.singType.move(fromOffsets: source, toOffset: target)
     }
 
 }

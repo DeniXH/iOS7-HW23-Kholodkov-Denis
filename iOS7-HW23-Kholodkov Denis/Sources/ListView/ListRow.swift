@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListRow: View {
     
-    let items: ModelSing
+    let items: SingType
     @State private var isShowed = false
     
     var body: some View {
@@ -35,7 +35,7 @@ struct ListRow: View {
 
 struct ListRow_Previews: PreviewProvider {
     static var previews: some View {
-        ListRow(items: ModelSing.model[0])
+        ListRow(items: SingType.singType[0])
     }
 }
 

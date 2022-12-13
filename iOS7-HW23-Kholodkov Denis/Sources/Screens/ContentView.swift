@@ -7,27 +7,27 @@
 
 import SwiftUI
 
-struct Radio: View {
-    var body: some View {
-        NavigationView {
-            ZStack {
-                Color.white
-            }
-            .navigationTitle(Metric.textRadio)
-        }
-    }
-}
+//struct Radio: View {
+//    var body: some View {
+//        NavigationView {
+//            ZStack {
+//                Color.white
+//            }
+//            .navigationTitle(Metric.textRadio)
+//        }
+//    }
+//}
 
-struct Search: View {
-    var body: some View {
-        NavigationView {
-            ZStack {
-                Color.white
-            }
-            .navigationTitle(Metric.textFind)
-        }
-    }
-}
+//struct Search: View {
+//    var body: some View {
+//        NavigationView {
+//            ZStack {
+//                Color.white
+//            }
+//            .navigationTitle(Metric.textFind)
+//        }
+//    }
+//}
 
 struct ContentView: View {
     var body: some View {
@@ -43,7 +43,7 @@ struct ContentView: View {
                     Image(systemName: Metric.pictureRadio)
                     Text(Metric.textRadio)
                 }
-            Search()
+            SearchView()
                 .tabItem {
                     Image(systemName: Metric.pictureSearch)
                     Text(Metric.textFind)

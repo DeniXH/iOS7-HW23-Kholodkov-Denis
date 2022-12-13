@@ -7,31 +7,31 @@
 
 import SwiftUI
 
-struct ModelSing: Hashable, Identifiable {
+struct SingType: Hashable, Identifiable {
     var id = UUID()
     let name: String
     let icon: String
 
-    static var model: [ModelSing] = [ModelSing(name: "Плейлисты",
+    static var singType: [SingType] = [SingType(name: "Плейлисты",
                                        icon: "music.note.list"),
-                                     ModelSing(name: "Артисты",
+                                     SingType(name: "Артисты",
                                        icon: "music.mic"),
-                                     ModelSing(name: "Альбомы",
+                                     SingType(name: "Альбомы",
                                        icon: "square.stack"),
-                                     ModelSing(name: "Песни",
+                                     SingType(name: "Песни",
                                        icon: "music.note"),
-                                     ModelSing(name: "Телешоу и фильмы",
+                                     SingType(name: "Телешоу и фильмы",
                                        icon: "tv"),
-                                     ModelSing(name: "Видеоклипы",
+                                     SingType(name: "Видеоклипы",
                                        icon: "music.note.tv"),
-                                     ModelSing(name: "Жанры",
+                                     SingType(name: "Жанры",
                                        icon: "guitars"),
-                                     ModelSing(name: "Сборники",
+                                     SingType(name: "Сборники",
                                        icon: "person.2.crop.square.stack"),
-                                     ModelSing(name: "Авторы",
+                                     SingType(name: "Авторы",
                                        icon: "music.quarternote.3"),
-                                     ModelSing(name: "Загружено",
+                                     SingType(name: "Загружено",
                                        icon: "arrow.down.circle"),
-                                     ModelSing(name: "Домашняя коллекция",
+                                     SingType(name: "Домашняя коллекция",
                                        icon: "music.note.house")]
 }
