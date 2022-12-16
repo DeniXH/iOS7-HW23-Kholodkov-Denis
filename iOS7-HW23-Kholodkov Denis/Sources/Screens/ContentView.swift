@@ -43,10 +43,15 @@ struct ContentView: View {
                     Image(systemName: Metric.pictureRadio)
                     Text(Metric.textRadio)
                 }
-            SearchView()
+            NavigationView {
+                SearchView()
+                    .navigationTitle(Metric.textFind)
+            }
                 .tabItem {
-                    Image(systemName: Metric.pictureSearch)
                     Text(Metric.textFind)
+                    Image(systemName: Metric.pictureSearch)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                 }
         }
         .accentColor(.blue)

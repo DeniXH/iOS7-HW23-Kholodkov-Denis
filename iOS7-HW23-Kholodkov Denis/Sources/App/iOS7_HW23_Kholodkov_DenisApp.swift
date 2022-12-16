@@ -15,3 +15,19 @@ struct iOS7_HW23_Kholodkov_DenisApp: App {
         }
     }
 }
+
+struct ImageCoversModifier: ViewModifier {
+    func body (content: Content) -> some View {
+        content
+            .aspectRatio(contentMode: .fill)
+            .frame(width: (UIScreen.main.bounds.width - 50) / 2,
+                   height: 180)
+            .cornerRadius(15)
+    }
+}
+
+extension View {
+    func imageCoverStyle() -> some View {
+        self.modifier(ImageCoversModifier())
+    }
+}
