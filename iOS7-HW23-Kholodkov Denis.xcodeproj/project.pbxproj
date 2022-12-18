@@ -104,6 +104,7 @@
 		92904DC92938EF2000858EEC /* iOS7-HW23-Kholodkov Denis */ = {
 			isa = PBXGroup;
 			children = (
+				92B392A5293910DA0039F687 /* App */,
 				92B392A4293910830039F687 /* Sources */,
 				92B392A6293911E50039F687 /* Resources */,
 			);
@@ -122,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				926CFE3D2947BF7600458AFA /* SearchView */,
-				92B392A5293910DA0039F687 /* App */,
 				92B392AA2939200A0039F687 /* ListView */,
 				92B392A929391FF70039F687 /* LibraryView */,
 				92B392A829391FD10039F687 /* Model */,
@@ -189,8 +189,8 @@
 		92B392AB293920290039F687 /* SongView */ = {
 			isa = PBXGroup;
 			children = (
-				92050372294CA68A0034EC6B /* PlayModules */,
 				92B392AE2939239A0039F687 /* SongView.swift */,
+				92050372294CA68A0034EC6B /* PlayModules */,
 			);
 			path = SongView;
 			sourceTree = "<group>";

@@ -23,7 +23,7 @@ struct LibraryView: View {
                     .padding(.leading, Metric.textMusicFromItunes)
                     .padding(.trailing, Metric.textMusicFromItunes)
                 Spacer()
-                SongView()
+               // SongView()
             }
             .navigationTitle(Metric.mediaStore)
             .navigationBarItems(trailing: NavigationLink(destination: ListMedia(),

@@ -31,7 +31,7 @@ struct ListMedia: View {
                         .foregroundColor(.red)
                 })
             } .navigationBarBackButtonHidden(true)
-            SongView()
+           // SongView()
         }
     }
     func  moveRows(source: IndexSet, target: Int) {

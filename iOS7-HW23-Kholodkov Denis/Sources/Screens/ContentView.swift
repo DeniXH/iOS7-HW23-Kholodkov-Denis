@@ -30,6 +30,11 @@ import SwiftUI
 //}
 
 struct ContentView: View {
+    
+    @State var expand = false
+    @State var isPlaying = false
+    @Namespace var animation
+    
     var body: some View {
         TabView {
             LibraryView()
@@ -37,7 +42,7 @@ struct ContentView: View {
                     Image(systemName: Metric.pictureMediastore)
                     Text(Metric.textMediaStore)
                 }
-
+            
             Radio()
                 .tabItem {
                     Image(systemName: Metric.pictureRadio)
@@ -47,14 +52,20 @@ struct ContentView: View {
                 SearchView()
                     .navigationTitle(Metric.textFind)
             }
-                .tabItem {
-                    Text(Metric.textFind)
-                    Image(systemName: Metric.pictureSearch)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                }
+            .tabItem {
+                Text(Metric.textFind)
+                Image(systemName: Metric.pictureSearch)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
         }
-        .accentColor(.blue)
+        .safeAreaInset(edge: .bottom) {
+            SongView(animation: animation,
+                     isPlaying: $isPlaying,
+                     expand: $expand)
+            .offset(y: expand ? 0 : -(90 / 2) + 6)
+            .accentColor(.blue)
+        }
     }
 }
 
