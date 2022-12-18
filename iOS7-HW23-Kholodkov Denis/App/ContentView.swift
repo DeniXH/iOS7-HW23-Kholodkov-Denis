@@ -7,29 +7,12 @@
 
 import SwiftUI
 
-struct Radio: View {
-    var body: some View {
-        NavigationView {
-            ZStack {
-                Color.white
-            }
-            .navigationTitle(Metric.textRadio)
-        }
-    }
-}
-
-struct Search: View {
-    var body: some View {
-        NavigationView {
-            ZStack {
-                Color.white
-            }
-            .navigationTitle(Metric.textFind)
-        }
-    }
-}
-
 struct ContentView: View {
+    
+    @State var expand = false
+    @State var isPlaying = false
+    @Namespace var animation
+    
     var body: some View {
         TabView {
             LibraryView()
@@ -37,19 +20,30 @@ struct ContentView: View {
                     Image(systemName: Metric.pictureMediastore)
                     Text(Metric.textMediaStore)
                 }
-
+            
             Radio()
                 .tabItem {
                     Image(systemName: Metric.pictureRadio)
                     Text(Metric.textRadio)
                 }
-            Search()
-                .tabItem {
-                    Image(systemName: Metric.pictureSearch)
-                    Text(Metric.textFind)
-                }
+            NavigationView {
+                SearchView()
+                    .navigationTitle(Metric.textFind)
+            }
+            .tabItem {
+                Text(Metric.textFind)
+                Image(systemName: Metric.pictureSearch)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
         }
-        .accentColor(.blue)
+        .safeAreaInset(edge: .bottom) {
+            SongView(animation: animation,
+                     isPlaying: $isPlaying,
+                     expand: $expand)
+            .offset(y: expand ? Metric.firstValueOffset : Metric.secondValueOffset)
+            .accentColor(.blue)
+        }
     }
 }
 
@@ -63,9 +57,11 @@ enum Metric {
     static let textRadio = "Радио"
     static let textFind = "Поиск"
     static let textMediaStore = "Медиатека"
-
+    
     static let pictureMediastore = "square.stack.fill"
     static let pictureRadio = "dot.radiowaves.left.and.right"
     static let pictureSearch = "magnifyingglass"
-
+    
+    static let firstValueOffset: CGFloat = 0
+    static let secondValueOffset: CGFloat = -39
 }

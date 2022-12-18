@@ -23,11 +23,11 @@ struct LibraryView: View {
                     .padding(.leading, Metric.textMusicFromItunes)
                     .padding(.trailing, Metric.textMusicFromItunes)
                 Spacer()
-                SongView()
             }
+
             .navigationTitle(Metric.mediaStore)
             .navigationBarItems(trailing: NavigationLink(destination: ListMedia(),
-                label: {
+                                                         label: {
                 Text(Metric.changeStore)
                     .foregroundColor(.red)
             }))
