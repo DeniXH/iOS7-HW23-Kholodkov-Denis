@@ -14,25 +14,40 @@ struct PlayerExtendedControlModul: View {
     var body: some View {
         HStack {
             Button {
-                print("gobackward.15")
+                print(Metric.buttonGobackward)
             } label: {
-                PlayerButtonImage(systemName: "gobackward.15", size: 35)
+                PlayerButtonImage(systemName: Metric.buttonGobackward, size: Metric.buttonSize)
                     .foregroundColor(.secondary)
             }
             Spacer()
             Button {
-                print("play")
+                print(Metric.buttonPrint)
                 isPlaying.toggle()
             } label: {
-                PlayerButtonImage(systemName: isPlaying ? "pause.fill" : "play.fill", size: 35)
+                PlayerButtonImage(systemName: isPlaying ? Metric.pauseImageName : Metric.playImageName,
+                                  size: Metric.buttonSize)
             }
             Spacer()
             Button {
-                print("goforward.15")
+                print(Metric.buttonGoforward)
             } label: {
-                PlayerButtonImage(systemName: "goforward.15", size: 35)
+                PlayerButtonImage(systemName: Metric.buttonGoforward, size: Metric.buttonSize)
             }
         }
-        .padding([.leading, .trailing], 40)
+        .padding([.leading, .trailing], Metric.hstackPadding)
+    }
+}
+
+extension PlayerExtendedControlModul {
+    enum Metric {
+        static let buttonGoforward = "goforward.15"
+        static let buttonSize: CGFloat = 35
+        static let buttonGobackward = "gobackward.15"
+
+        static let buttonPrint = "play"
+        static let pauseImageName = "pause.fill"
+        static let playImageName = "play.fill"
+
+        static let hstackPadding: CGFloat = 40
     }
 }

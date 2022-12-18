@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct SearchDetailView: View {
-
+    
     @StateObject var radio = Music()
-
+    
     var selectedRadio: ArtistModelKind
-
+    
     let rows = [GridItem(.flexible())]
-    let columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
-
+    let columns = Array(repeating: GridItem(.flexible(), spacing: Metric.columnSpacing), count: Metric.columnCount)
+    
     var body: some View {
         ScrollView(.vertical) {
             VStack(alignment: .leading) {
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: rows) {
                         RadioStationRectangleView(cover: selectedRadio)
-
+                        
                         ForEach(radio.albums) { cover in
                             if cover != selectedRadio {
                                 RadioStationRectangleView(cover: cover)
@@ -30,42 +30,42 @@ struct SearchDetailView: View {
                         }
                     }
                 }
-
+                
                 Divider()
                     .padding(.leading, 5)
-
+                
                 HStack {
-                    Text("Autumn mood")
+                    Text(Metric.winterMood)
                         .font(.title)
                     Spacer()
-                    Text("All")
+                    Text(Metric.all)
                         .foregroundColor(.red)
                 }
-                .padding([.top, .leading, .trailing], 15)
-
+                .padding([.top, .leading, .trailing], Metric.padding)
+                
                 LazyVGrid(columns: columns) {
                     ForEach(radio.albums) { cover in
                         ZStack(alignment: .bottomLeading) {
                             Image(cover.imageSqr)
                                 .resizable()
                                 .imageCoverStyle()
-
+                            
                             Spacer()
                             Text(cover.title)
                                 .foregroundColor(.white)
-                                .padding([.bottom, .leading], 15)
+                                .padding([.bottom, .leading], Metric.padding)
                         }
                     }
                 }
                 .padding([.leading, .trailing])
             }
-            .padding(.bottom, 90)
+            .padding(.bottom, Metric.bottomPadding)
         }
         .toolbar {
             Button {
-                print("More...")
+                print(Metric.bottomPadding)
             } label: {
-                Image(systemName: "ellipsis")
+                Image(systemName: Metric.buttonImageName)
             }
         }
     }
@@ -74,5 +74,19 @@ struct SearchDetailView: View {
 struct SearchDetailView_Previews: PreviewProvider {
     static var previews: some View {
         SearchDetailView(selectedRadio: ArtistModelKind.covers[0])
+    }
+}
+
+extension SearchDetailView {
+    enum Metric {
+        static let columnSpacing: CGFloat = 15
+        static let columnCount = 2
+        static let padding: CGFloat = 15
+        static let bottomPadding: CGFloat = 90
+        
+        static let winterMood = "Winter mood"
+        static let all = "All"
+        static let buttonPrint = "More..."
+        static let buttonImageName = "ellipsis"
     }
 }

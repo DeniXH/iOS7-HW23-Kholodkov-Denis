@@ -13,23 +13,24 @@ struct PlayerProgressLine: View {
             ZStack(alignment: .leading) {
                 Rectangle()
                     .fill(.gray)
-                    .frame(height: 2)
+                    .frame(height: Metric.rectangleHeight)
                     .padding()
                 Circle()
                     .fill(.gray)
-                    .frame(width: 7, height: 7)
-                    .padding(.leading, 100)
+                    .frame(width: Metric.circleFrame,
+                           height: Metric.circleFrame)
+                    .padding(.leading, Metric.circlePadding)
             }
             
             HStack {
-                Text("0:27")
+                Text(Metric.hstackFirst)
                 Spacer()
-                Text("-4:13")
+                Text(Metric.hstackSecond)
             }
             .font(.caption)
             .foregroundColor(.secondary)
             .padding([.trailing, .leading])
-            .offset(y: -11)
+            .offset(y: Metric.hstackOffset)
         }
     }
 }
@@ -37,5 +38,18 @@ struct PlayerProgressLine: View {
 struct ProgressLine_Previews: PreviewProvider {
     static var previews: some View {
         PlayerProgressLine()
+    }
+}
+
+extension PlayerProgressLine {
+    enum Metric {
+        static let rectangleHeight: CGFloat = 2
+        static let circleFrame: CGFloat = 7
+        static let circlePadding: CGFloat = 100
+
+        static let hstackFirst = "0:27"
+        static let hstackSecond = "-4:13"
+        static let hstackOffset: CGFloat = -11
+
     }
 }

@@ -126,7 +126,7 @@
 				92B392AA2939200A0039F687 /* ListView */,
 				92B392A929391FF70039F687 /* LibraryView */,
 				92B392A829391FD10039F687 /* Model */,
-				92B392A7293913CA0039F687 /* Screens */,
+				92B392A7293913CA0039F687 /* Radio */,
 				92B392AB293920290039F687 /* SongView */,
 			);
 			path = Sources;
@@ -135,6 +135,7 @@
 		92B392A5293910DA0039F687 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				92904DCC2938EF2000858EEC /* ContentView.swift */,
 				92904DCA2938EF2000858EEC /* iOS7_HW23_Kholodkov_DenisApp.swift */,
 			);
 			path = App;
@@ -149,15 +150,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		92B392A7293913CA0039F687 /* Screens */ = {
+		92B392A7293913CA0039F687 /* Radio */ = {
 			isa = PBXGroup;
 			children = (
-				92904DCC2938EF2000858EEC /* ContentView.swift */,
 				92B392B62939EB790039F687 /* Radio.swift */,
 				92B392B8293A59810039F687 /* RadioStation.swift */,
 				92050370294B93F60034EC6B /* RadioStationRectangleView.swift */,
 			);
-			path = Screens;
+			path = Radio;
 			sourceTree = "<group>";
 		};
 		92B392A829391FD10039F687 /* Model */ = {

@@ -9,14 +9,16 @@ import SwiftUI
 
 @main
 struct iOS7_HW23_Kholodkov_DenisApp: App {
+    
     @StateObject var currentMusic = CurrentMusic()
-     var body: some Scene {
-         WindowGroup {
-             ContentView()
-                 .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
-                 .environmentObject(currentMusic)
-         }
-     }
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
+                .environmentObject(currentMusic)
+        }
+    }
 }
 
 extension UIApplication {
@@ -41,14 +43,23 @@ struct ImageCoversModifier: ViewModifier {
     func body (content: Content) -> some View {
         content
             .aspectRatio(contentMode: .fill)
-            .frame(width: (UIScreen.main.bounds.width - 50) / 2,
-                   height: 180)
-            .cornerRadius(15)
+            .frame(width: (UIScreen.main.bounds.width - Metric.widthIdent) / Metric.two,
+                   height: Metric.height)
+            .cornerRadius(Metric.cornerRadius)
     }
 }
 
 extension View {
     func imageCoverStyle() -> some View {
         self.modifier(ImageCoversModifier())
+    }
+}
+
+extension ImageCoversModifier {
+    enum Metric {
+        static let widthIdent: CGFloat = 50
+        static let two: CGFloat = 2
+        static let height: CGFloat = 180
+        static let cornerRadius: CGFloat = 15
     }
 }

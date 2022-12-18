@@ -7,28 +7,6 @@
 
 import SwiftUI
 
-//struct Radio: View {
-//    var body: some View {
-//        NavigationView {
-//            ZStack {
-//                Color.white
-//            }
-//            .navigationTitle(Metric.textRadio)
-//        }
-//    }
-//}
-
-//struct Search: View {
-//    var body: some View {
-//        NavigationView {
-//            ZStack {
-//                Color.white
-//            }
-//            .navigationTitle(Metric.textFind)
-//        }
-//    }
-//}
-
 struct ContentView: View {
     
     @State var expand = false
@@ -63,7 +41,7 @@ struct ContentView: View {
             SongView(animation: animation,
                      isPlaying: $isPlaying,
                      expand: $expand)
-            .offset(y: expand ? 0 : -(90 / 2) + 6)
+            .offset(y: expand ? Metric.firstValueOffset : Metric.secondValueOffset)
             .accentColor(.blue)
         }
     }
@@ -79,9 +57,11 @@ enum Metric {
     static let textRadio = "Радио"
     static let textFind = "Поиск"
     static let textMediaStore = "Медиатека"
-
+    
     static let pictureMediastore = "square.stack.fill"
     static let pictureRadio = "dot.radiowaves.left.and.right"
     static let pictureSearch = "magnifyingglass"
-
+    
+    static let firstValueOffset: CGFloat = 0
+    static let secondValueOffset: CGFloat = -39
 }

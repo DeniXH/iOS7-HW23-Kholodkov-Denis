@@ -20,7 +20,7 @@ struct RadioStation: View {
                 .scaledToFit()
                 .frame(width: Metric.imageSize,
                        height: Metric.imageSize)
-                .cornerRadius(8)
+                .cornerRadius(Metric.cornerRadius)
 
             VStack(alignment: .leading) {
                 Text(textTitle)

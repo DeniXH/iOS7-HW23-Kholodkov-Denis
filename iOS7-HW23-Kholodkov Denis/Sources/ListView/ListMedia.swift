@@ -31,13 +31,12 @@ struct ListMedia: View {
                         .foregroundColor(.red)
                 })
             } .navigationBarBackButtonHidden(true)
-           // SongView()
         }
     }
+    
     func  moveRows(source: IndexSet, target: Int) {
         SingType.singType.move(fromOffsets: source, toOffset: target)
     }
-
 }
 
 struct ListMedia_Previews: PreviewProvider {

@@ -16,26 +16,32 @@ struct PlayerCoverView: View {
     var body: some View {
 
         ZStack {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: Metric.roundedRectangleCornerRadius)
                 .fill(Color(UIColor.systemGray5))
-                .frame(width: 70, height: 70)
-                .shadow(radius: 5, x: 2, y: 2)
-                .opacity(0.4)
-            Image(systemName: "music.note")
+                .frame(width: Metric.roundedRectangleFrame,
+                       height: Metric.roundedRectangleFrame)
+                .shadow(radius: Metric.roundedRectangleRadius,
+                        x: Metric.roundedRectangleX,
+                        y: Metric.roundedRectangleY)
+                .opacity(Metric.roundedRectangleOpacity)
+            Image(systemName: Metric.musicImageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 30, height: 30)
-                .opacity(0.1)
+                .frame(width: Metric.musicImageFrame,
+                       height: Metric.musicImageFrame)
+                .opacity(Metric.musicImageOpacity)
 
             Image(currentMusic.coverImage)
                 .resizable()
-                .frame(width: expand ? Metric.screenHeight / 3 : 70,
-                       height: expand ? Metric.screenHeight / 3 : 70)
-                .cornerRadius(expand ? 10 : 0)
-                .shadow(radius: 5, x: 2, y: 2)
+                .frame(width: expand ? Metric.screenHeight / Metric.three : Metric.seventy,
+                       height: expand ? Metric.screenHeight / Metric.three : Metric.seventy)
+                .cornerRadius(expand ? Metric.currentMusicImageCornerRadius : Metric.zero)
+                .shadow(radius: Metric.currentMusicImageRadius,
+                        x: Metric.currentMusicImageX,
+                        y: Metric.currentMusicImageY)
                 .scaledToFit()
         }
-        .padding(20)
+        .padding(Metric.zstackPadding)
     }
 }
 
@@ -43,10 +49,25 @@ extension PlayerCoverView {
     enum Metric {
         static var playerHeight: CGFloat = 90
         static var screenHeight = UIScreen.main.bounds.height
+        static let roundedRectangleCornerRadius: CGFloat = 10
+        static let roundedRectangleFrame: CGFloat = 70
+        static let roundedRectangleRadius: CGFloat = 5
+        static let roundedRectangleX: CGFloat = 2
+        static let roundedRectangleY: CGFloat = 2
+        static let roundedRectangleOpacity: CGFloat = 0.4
+
+        static let musicImageName = "music.note"
+        static let musicImageFrame: CGFloat = 30
+        static let musicImageOpacity: CGFloat = 0.1
+        static let three: CGFloat = 3
+        static let seventy: CGFloat = 70
+        static let currentMusicImageRadius: CGFloat = 5
+        static let currentMusicImageX: CGFloat = 2
+        static let currentMusicImageY: CGFloat = 2
+        static let currentMusicImageCornerRadius: CGFloat = 10
+        static let zero: CGFloat = 0
+        static let zstackPadding: CGFloat = 20
+
+
     }
 }
-//struct PlayerCoverView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlayerCoverView()
-//    }
-//}

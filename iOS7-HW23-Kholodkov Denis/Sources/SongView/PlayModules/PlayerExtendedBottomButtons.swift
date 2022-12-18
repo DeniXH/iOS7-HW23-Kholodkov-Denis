@@ -8,24 +8,26 @@
 import SwiftUI
 
 struct PlayerExtendedBottomButtons: View {
+
     var body: some View {
         HStack(spacing: 50) {
             Button {
-                print("message")
+                print(Metric.buttonMessagePrint)
             } label: {
-                PlayerButtonImage(systemName: "arrow.up.message", size: 20)
+                PlayerButtonImage(systemName: Metric.buttonMessageImageName,
+                                  size: Metric.buttonSize)
             }
 
             Button {
-                print("airplay")
+                print(Metric.buttonAirplayPrint)
             } label: {
-                PlayerButtonImage(systemName: "airplayaudio", size: 20)
+                PlayerButtonImage(systemName: Metric.buttonAirplayImageName, size: Metric.buttonSize)
             }
 
             Button {
-                print("list")
+                print(Metric.buttonListPrint)
             } label: {
-                PlayerButtonImage(systemName: "text.badge.plus", size: 20)
+                PlayerButtonImage(systemName: Metric.buttonListImageName, size: Metric.buttonSize)
             }
         }
     }
@@ -37,5 +39,21 @@ struct PlayerExpandedBottomButtons_Previews: PreviewProvider {
             PlayerExtendedBottomButtons()
 
         }
+    }
+}
+
+extension PlayerExtendedBottomButtons {
+    enum Metric {
+        static let buttonSize: CGFloat = 20
+
+        static let buttonMessagePrint = "message"
+        static let buttonMessageImageName = "arrow.up.message"
+
+        static let buttonAirplayPrint = "airplay"
+        static let buttonAirplayImageName = "airplayaudio"
+
+        static let buttonListPrint = "list"
+        static let buttonListImageName = "text.badge.plus"
+
     }
 }
