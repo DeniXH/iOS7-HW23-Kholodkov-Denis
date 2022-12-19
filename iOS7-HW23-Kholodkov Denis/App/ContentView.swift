@@ -36,6 +36,15 @@ struct ContentView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }
+            NavigationView {
+                SearchViewByUIKit()
+            }
+            .tabItem {
+                Text(Metric.searchUIKit)
+                Image(systemName: Metric.pictureSearchUIKit)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
         }
         .safeAreaInset(edge: .bottom) {
             SongView(animation: animation,
@@ -57,10 +66,12 @@ enum Metric {
     static let textRadio = "Радио"
     static let textFind = "Поиск"
     static let textMediaStore = "Медиатека"
+    static let searchUIKit = "Поиск UIKit"
     
     static let pictureMediastore = "square.stack.fill"
     static let pictureRadio = "dot.radiowaves.left.and.right"
     static let pictureSearch = "magnifyingglass"
+    static let pictureSearchUIKit = "arrow.up.left.and.down.right.magnifyingglass"
     
     static let firstValueOffset: CGFloat = 0
     static let secondValueOffset: CGFloat = -39
