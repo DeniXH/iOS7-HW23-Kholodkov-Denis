@@ -14,6 +14,11 @@
 		92050378294CB34D0034EC6B /* PlayerProgressLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92050377294CB34D0034EC6B /* PlayerProgressLine.swift */; };
 		9205037A294CB4250034EC6B /* PlayerExtendedControlModul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92050379294CB4250034EC6B /* PlayerExtendedControlModul.swift */; };
 		9205037D294CB46F0034EC6B /* PlayerExtendedBottomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9205037C294CB46F0034EC6B /* PlayerExtendedBottomButtons.swift */; };
+		92550EF52950343E004479A5 /* SectionHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92550EF42950343E004479A5 /* SectionHeaderReusableView.swift */; };
+		92550EF729503454004479A5 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92550EF629503454004479A5 /* Section.swift */; };
+		92550EF9295036B6004479A5 /* SearchViewByUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92550EF8295036B6004479A5 /* SearchViewByUIKit.swift */; };
+		92550EFB29503709004479A5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92550EFA29503709004479A5 /* SearchViewController.swift */; };
+		92550EFD29503738004479A5 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92550EFC29503738004479A5 /* SearchViewCell.swift */; };
 		926CFE3F2948684100458AFA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926CFE3E2948684000458AFA /* SearchView.swift */; };
 		926CFE412948B95200458AFA /* ArtistModelKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926CFE402948B95100458AFA /* ArtistModelKind.swift */; };
 		92904DCB2938EF2000858EEC /* iOS7_HW23_Kholodkov_DenisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92904DCA2938EF2000858EEC /* iOS7_HW23_Kholodkov_DenisApp.swift */; };
@@ -37,6 +42,11 @@
 		92050377294CB34D0034EC6B /* PlayerProgressLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProgressLine.swift; sourceTree = "<group>"; };
 		92050379294CB4250034EC6B /* PlayerExtendedControlModul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerExtendedControlModul.swift; sourceTree = "<group>"; };
 		9205037C294CB46F0034EC6B /* PlayerExtendedBottomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerExtendedBottomButtons.swift; sourceTree = "<group>"; };
+		92550EF42950343E004479A5 /* SectionHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderReusableView.swift; sourceTree = "<group>"; };
+		92550EF629503454004479A5 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		92550EF8295036B6004479A5 /* SearchViewByUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewByUIKit.swift; sourceTree = "<group>"; };
+		92550EFA29503709004479A5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		92550EFC29503738004479A5 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
 		926CFE3E2948684000458AFA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		926CFE402948B95100458AFA /* ArtistModelKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistModelKind.swift; sourceTree = "<group>"; };
 		92904DC72938EF2000858EEC /* iOS7-HW23-Kholodkov Denis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS7-HW23-Kholodkov Denis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +84,34 @@
 				9205037C294CB46F0034EC6B /* PlayerExtendedBottomButtons.swift */,
 			);
 			path = PlayModules;
+			sourceTree = "<group>";
+		};
+		92550EF229503269004479A5 /* SearchViewUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				92550EF329503345004479A5 /* Model */,
+				92550EF8295036B6004479A5 /* SearchViewByUIKit.swift */,
+				92550EFA29503709004479A5 /* SearchViewController.swift */,
+			);
+			path = SearchViewUIKit;
+			sourceTree = "<group>";
+		};
+		92550EF329503345004479A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92550EFE295037AE004479A5 /* Cell */,
+				92550EF42950343E004479A5 /* SectionHeaderReusableView.swift */,
+				92550EF629503454004479A5 /* Section.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92550EFE295037AE004479A5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92550EFC29503738004479A5 /* SearchViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		926CFE3D2947BF7600458AFA /* SearchView */ = {
@@ -122,6 +160,7 @@
 		92B392A4293910830039F687 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				92550EF229503269004479A5 /* SearchViewUIKit */,
 				926CFE3D2947BF7600458AFA /* SearchView */,
 				92B392AA2939200A0039F687 /* ListView */,
 				92B392A929391FF70039F687 /* LibraryView */,
@@ -265,15 +304,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92550EF52950343E004479A5 /* SectionHeaderReusableView.swift in Sources */,
 				9205037D294CB46F0034EC6B /* PlayerExtendedBottomButtons.swift in Sources */,
 				926CFE3F2948684100458AFA /* SearchView.swift in Sources */,
 				92904DCD2938EF2000858EEC /* ContentView.swift in Sources */,
 				92050376294CB2950034EC6B /* PlayerButtonImage.swift in Sources */,
+				92550EF729503454004479A5 /* Section.swift in Sources */,
 				92B392AD293920600039F687 /* LibraryView.swift in Sources */,
 				9205037A294CB4250034EC6B /* PlayerExtendedControlModul.swift in Sources */,
+				92550EF9295036B6004479A5 /* SearchViewByUIKit.swift in Sources */,
 				92050374294CA8200034EC6B /* PlayerCoverView.swift in Sources */,
+				92550EFD29503738004479A5 /* SearchViewCell.swift in Sources */,
 				92B392B9293A59810039F687 /* RadioStation.swift in Sources */,
 				92904DCB2938EF2000858EEC /* iOS7_HW23_Kholodkov_DenisApp.swift in Sources */,
+				92550EFB29503709004479A5 /* SearchViewController.swift in Sources */,
 				92B392B3293941530039F687 /* SingType.swift in Sources */,
 				926CFE412948B95200458AFA /* ArtistModelKind.swift in Sources */,
 				92B392AF2939239A0039F687 /* SongView.swift in Sources */,
